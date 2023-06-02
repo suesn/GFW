@@ -10,7 +10,5 @@ cat <(curl -Ls https://raw.githubusercontent.com/suesn/GFW/main/b.txt) | while r
 do                        
         echo iptables -I OUTPUT -p tcp -m string --string ""$line"" --algo bm -j DROP
 iptables -I OUTPUT -p tcp -m string --string ""$line"" --algo bm -j DROP
-        echo iptables -I OUTPUT -p udp -m string --string ""$line"" --algo bm -j DROP
-iptables -I OUTPUT -p udp -m string --string ""$line"" --algo bm -j DROP
-
+       
 done
